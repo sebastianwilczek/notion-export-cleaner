@@ -1,0 +1,27 @@
+{
+  "name": "notion-export-cleaner",
+  "version": "1.0.0",
+  "description": "A command line utility to clean up the Markdown exports of Notion.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastianwilczek/notion-export-cleaner.git"
+  },
+  "keywords": [
+    "notion",
+    "markdown",
+    "export"
+  ],
+  "author": "Sebastian Wilczek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sebastianwilczek/notion-export-cleaner/issues"
+  },
+  "homepage": "https://github.com/sebastianwilczek/notion-export-cleaner#readme",
+  "dependencies": {
+    "csv-parser": "^3.0.0"
+  }
+}
