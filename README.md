@@ -14,7 +14,7 @@ npm install -g notion-export-cleaner
 
 ## Usage
 
-To use notion-export-cleaner, export your Notion space to Markdown & CSV and run the following command in the notion-export-cleaner directory:
+To use notion-export-cleaner, export your Notion space to Markdown & CSV and run the following command:
 
 ```
 notion-export-cleaner /path/to/your/notion/markdown/export/directory /path/to/your/destination/directory
