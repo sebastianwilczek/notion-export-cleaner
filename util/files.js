@@ -27,7 +27,7 @@ const getAllFilesWithExtension = async (sourceDir, extension) => {
   }
 
   return markdownFiles;
-}
+};
 
 /**
  * Processes the given file and writes the result to the given destination.
@@ -77,7 +77,7 @@ const processFile = async (sourcePath, destPath, processors) => {
       });
     }
   });
-}
+};
 
 /**
  * Converts the given CSV file to a Markdown file.
@@ -119,7 +119,7 @@ const convertCsvToMarkdown = async (sourcePath, destPath) => {
         });
     }
   });
-}
+};
 
 module.exports = {
   getAllFilesWithExtension,

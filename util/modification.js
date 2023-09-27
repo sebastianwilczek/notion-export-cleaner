@@ -1,6 +1,6 @@
 const { cleanPath } = require("./paths");
 
-const markdownLinkRegex = /\[([^\[\]]*)\]\(([^[\]]*)\)/g;
+const markdownLinkRegex = /\[([^[\]]*)\]\(([^[\]]*)\)/g;
 
 /**
  * Takes lines of Markdown text and checks them for the precense of Markdown links.
@@ -13,7 +13,7 @@ const cleanMarkdownLinks = (line) => {
   return line.replace(markdownLinkRegex, (match, linkText, linkURL) => {
     return `[${linkText}](${cleanPath(linkURL)})`;
   });
-}
+};
 
 module.exports = {
   cleanMarkdownLinks,
