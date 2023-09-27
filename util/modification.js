@@ -11,6 +11,14 @@ const markdownLinkRegex = /\[([^[\]]*)\]\(([^[\]]*)\)/g;
 const cleanMarkdownLinks = (line) => {
   // Replace all Markdown links with the specified URL
   return line.replace(markdownLinkRegex, (match, linkText, linkURL) => {
+    if (!linkURL) {
+      return match;
+    }
+
+    if (linkURL.startsWith("http")) {
+      return match;
+    }
+
     return `[${linkText}](${cleanPath(linkURL)})`;
   });
 };
