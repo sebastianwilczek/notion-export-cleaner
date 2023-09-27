@@ -10,7 +10,7 @@ const destDir = process.argv[3];
  * Checks if both a source and destination directory were provided.
  */
 if (!sourceDir || !destDir) {
-  console.error("Usage: notion-markdown-cleaner <source_directory> <destination_directory>");
+  console.error("Usage: notion-export-cleaner <source_directory> <destination_directory>");
   process.exit(1);
 }
 

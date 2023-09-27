@@ -7,9 +7,7 @@ A command line utility to clean up the Markdown exports of Notion.
 To install notion-export-cleaner, run the following command in your terminal:
 
 ```
-git clone https://github.com/sebastianwilczek/notion-export-cleaner
-cd notion-export-cleaner
-npm install
+npm install -g notion-export-cleaner
 ```
 
 ## Usage
@@ -17,8 +15,10 @@ npm install
 To use notion-export-cleaner, export your Notion space to Markdown & CSV and run the following command in the notion-export-cleaner directory:
 
 ```
-node notion-markdown-cleaner.js /path/to/your/notion/markdown/export/directory /path/to/your/destination/directory
+notion-export-cleaner /path/to/your/notion/markdown/export/directory /path/to/your/destination/directory
 ```
+
+You can also use `nec` as a shortcut for `notion-export-cleaner`.
 
 The first argument is the path to the directory containing the Markdown files exported from Notion. The second argument is the path to the directory where the cleaned up Markdown files should be stored.
 
