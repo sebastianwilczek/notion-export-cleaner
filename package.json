@@ -1,6 +1,6 @@
 {
   "name": "notion-export-cleaner",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A command line utility to clean up the Markdown exports of Notion.",
   "main": "index.js",
   "scripts": {
