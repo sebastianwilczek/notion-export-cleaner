@@ -2,7 +2,7 @@
 const { getAllFilesWithExtension, processFile, convertCsvToMarkdown } = require("./util/files");
 const { cleanMarkdownLinks } = require("./util/modification");
 const { cleanPath } = require("./util/paths");
-const path = require("path");
+const nodePath = require("path");
 
 const sourceDir = process.argv[2];
 const destDir = process.argv[3];
@@ -27,7 +27,7 @@ if (!sourceDir || !destDir) {
       console.log("\x1b[31m%s\x1b[0m", `+ ${result}`);
       convertCsvToMarkdown(
         path,
-        path.join(destDir, result),
+        nodePath.join(destDir, result),
       );
     });
 
@@ -40,7 +40,7 @@ if (!sourceDir || !destDir) {
       console.log("\x1b[33m%s\x1b[0m", `+ ${result}`);
       processFile(
         path,
-        path.join(destDir, result),
+        nodePath.join(destDir, result),
         [
           cleanMarkdownLinks,
         ]
@@ -59,7 +59,7 @@ if (!sourceDir || !destDir) {
       console.log("\x1b[32m%s\x1b[0m", `+ ${result}`);
       processFile(
         path,
-        path.join(destDir, result),
+        nodePath.join(destDir, result),
         []
       );
     });
