@@ -1,5 +1,7 @@
 # notion-export-cleaner
 
+[![npm version](https://img.shields.io/npm/v/notion-export-cleaner.svg?style=flat-square)](https://www.npmjs.org/package/notion-export-cleaner)
+
 A command line utility to clean up the Markdown exports of Notion.
 
 ## Installation
