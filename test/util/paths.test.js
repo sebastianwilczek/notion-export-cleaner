@@ -63,4 +63,25 @@ describe("cleanPath", () => {
     const result = cleanPath(path);
     expect(result).toBe(expected);
   });
+
+  it("should handle paths with multiple directories, special characters, spaces, markdown file", () => {
+    const path = "This is a directory 123/This is & another directory 123/My Notion file with spaces & special chars 12345.md";
+    const expected = "This-is-a-directory/This-is-another-directory/My-Notion-file-with-spaces-special-chars.md";
+    const result = cleanPath(path);
+    expect(result).toBe(expected);
+  });
+
+  it("should handle paths with multiple directories, special characters, spaces, CSV file", () => {
+    const path = "This is a directory 123/This is & another directory 123/My Notion file with spaces & special chars 12345.csv";
+    const expected = "This-is-a-directory/This-is-another-directory/My-Notion-file-with-spaces-special-chars.md";
+    const result = cleanPath(path);
+    expect(result).toBe(expected);
+  });
+
+  it("should handle paths with multiple directories, special characters, spaces, any file", () => {
+    const path = "This is a directory 123/This is & another directory 123/My Notion file with spaces & special chars 12345.html";
+    const expected = "This-is-a-directory/This-is-another-directory/My-Notion-file-with-spaces-special-chars-12345.html";
+    const result = cleanPath(path);
+    expect(result).toBe(expected);
+  });
 });

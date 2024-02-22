@@ -6,11 +6,11 @@
  */
 const cleanPath = (path) => {
   const pathWithoutSpaceEscapes = path.trim().replace(/%20/g, " ");
-  const pathWithoutMd = pathWithoutSpaceEscapes.replace(/ (\S*?)\.md$/, ".md");
+  const pathWithoutSpaces = pathWithoutSpaceEscapes.replace(/\s(?=\S*(\/|$))/g, "TOBEREPLACED").replace(/ /g, "-").replace(/TOBEREPLACED/g, " ");
+  const pathWithoutMd = pathWithoutSpaces.replace(/ (\S*?)\.md$/, ".md");
   const pathWithoutCsv = pathWithoutMd.replace(/ (\S*?)\.csv$/, ".md");
   const pathWithoutIds = pathWithoutCsv.replace(/([^/]+) ([^/]+)\//g, "$1/");
-  const pathWithoutSpaces = pathWithoutIds.replace(/ /g, "-");
-  const pathWithoutIllegalPathCharacters = pathWithoutSpaces.replace(/[^a-zA-Z0-9-/.]/g, "");
+  const pathWithoutIllegalPathCharacters = pathWithoutIds.replace(/ /g, "-").replace(/[^a-zA-Z0-9-/.]/g, "");
   const pathWithoutMultipleDashes = pathWithoutIllegalPathCharacters.replace(/-{2,}/g, "-");
   return pathWithoutMultipleDashes;
 };
